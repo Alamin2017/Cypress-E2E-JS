@@ -1,0 +1,26 @@
+{
+  "name": "cypress-pom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "test:browser:headless": "npx cypress run --browser=chrome",
+    "test:browser:headed": "npx cypress run --browser=chrome --headed",
+    "browser:chrome:allure:pass": "npx cypress run --browser=chrome --headed --reporter mocha-allure-reporter && allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "test:allure:report:headed": "npx cypress run --browser=chrome --headed --reporter mocha-allure-reporter",
+    "test:allure:report:headless": "npx cypress run --browser=chrome --reporter mocha-allure-reporter",
+    "test:allure:result": "allure generate allure-results --clean -o allure-report && allure open allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.0",
+    "allure-commandline": "^2.30.0",
+    "cypress": "^13.16.1",
+    "cypress-localstorage-commands": "^2.2.6",
+    "cypress-xpath": "^2.0.1",
+    "mocha-allure-reporter": "^1.4.0"
+  }
+}
