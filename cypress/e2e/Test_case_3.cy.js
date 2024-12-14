@@ -1,4 +1,4 @@
-import SignInLocator from "../pages/SignInPage";
+import { SignInLocator } from "../pages/SignInPage";
 describe('Color code test automation', () => {
     it('test started', () => {
         cy.visit("https://secure.login.gov/");

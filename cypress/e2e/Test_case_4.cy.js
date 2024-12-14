@@ -1,7 +1,9 @@
+import PageObject from "../pageobject/PageObject";
 describe('Color code test automation', () => {
     it('test started', () => {
-        cy.visit("https://www.skitto.com/");
-        cy.xpath("//ul[@class='secondary_menu']//a[normalize-space()='contact us']").click();
-        
+        cy.visit("https://automationexercise.com/login");
+        PageObject.loginObj.name_input_field().type("tania");
+        PageObject.loginObj.email_address_input_field().type("tania12@gmail.com");
+
     });
 });

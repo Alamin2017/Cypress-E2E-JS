@@ -1,4 +1,4 @@
-class SignInLocator{
+export class SignInLocator{
     static sign_in_button(){
         return cy.xpath("//button[normalize-space()='Sign in']");
     }
@@ -10,4 +10,3 @@ class SignInLocator{
     }
 
 }
-export default SignInLocator
