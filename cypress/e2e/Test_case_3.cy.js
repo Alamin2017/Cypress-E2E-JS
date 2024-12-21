@@ -1,10 +1,9 @@
-import { SignInLocator } from "../pages/SignInPage";
+import PageObject from "../pageobject/PageObject";
 describe('Color code test automation', () => {
     it('test started', () => {
-        cy.visit("https://secure.login.gov/");
-        SignInLocator.sign_in_button().click();
-        SignInLocator.email_address_text_field().should('have.css', 'border-color', 'rgb(226, 28, 61)');
-        SignInLocator.password_text_field().should('have.css', 'border-color', 'rgb(226, 28, 61)');
+        cy.visit("https://automationexercise.com/login");
+        PageObject.loginObj.name_input_field().type("tania");
+        PageObject.loginObj.email_address_input_field().type("tania12@gmail.com");
 
     });
 });
