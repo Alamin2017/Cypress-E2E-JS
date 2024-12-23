@@ -6,7 +6,6 @@ class PageObject{
         this.homeObj=new HomeLocator();
         this.productObj=new ProductLocator();
         this.loginObj=new LoginLocator();
-        
     }
 }
 export default new PageObject;
