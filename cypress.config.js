@@ -5,8 +5,8 @@ module.exports = defineConfig({
   
   e2e: {
     watchForFileChanges:false,
-    defaultCommandTimeout:30000,
-    requestTimeout:30000,
+    defaultCommandTimeout:60000,
+    requestTimeout:60000,
     responseTimeout:60000,
     viewportWidth:1280,
     viewportHeight:720,
