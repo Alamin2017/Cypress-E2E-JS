@@ -14,7 +14,7 @@ describe('Color code test automation', () => {
         cy.xpath("//input[@placeholder='Last Name']").type("amin");
         cy.xpath("//button[normalize-space()='Continue']").click();
     });
-    it.only('test-3', () => {
+    it('test-3', () => {
         cy.visit('https://www.saucedemo.com/');
         cy.get('[data-test="username"]').type('standard_user');
         cy.get('[data-test="password"]').type('secret_sauce');
@@ -32,4 +32,37 @@ describe('Color code test automation', () => {
             });
         });
     });
+    it('test-4', () => {
+        cy.visit('https://automationexercise.com/');
+        cy.xpath("//a[normalize-space()='Home']").should('include.text','Home');
+        cy.xpath("//a[normalize-space()='Home']").should('have.text',' Home');
+        cy.xpath("//a[normalize-space()='Home']").invoke('text').then((text) => {
+            expect(text.trim()).to.equal('Home');
+        });
+    });
+    it('test-5', () => {
+        cy.visit('https://www.demoblaze.com/index.html');
+        cy.url().then((url) => {
+            cy.log('Page URL is:', url);
+        });
+        cy.url().should('eq', 'https://www.demoblaze.com/index.html');
+        cy.title().then((title) => {
+            cy.log('Page Title is:', title);
+        });
+        cy.title().should('eq', 'STORE');
+    });
+    it.only('test-6', () => {
+        cy.visit('https://www.demoblaze.com/index.html');
+        cy.get('a').each(($link) => {
+            const linkText = $link.text();
+            cy.log(linkText);
+        });
+        cy.xpath('//*[@id="tbodyid"]//h4/a').should('have.length', 9).then((products) => {
+            cy.wrap(products).each((product) => {
+              const productName = product.text();
+              cy.log(productName);
+          });
+      });
+    });
+
 });

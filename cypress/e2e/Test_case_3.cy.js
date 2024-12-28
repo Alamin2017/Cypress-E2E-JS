@@ -4,6 +4,5 @@ describe('Color code test automation', () => {
         cy.visit("https://automationexercise.com/login");
         PageObject.loginObj.name_input_field().type("tania");
         PageObject.loginObj.email_address_input_field().type("tania12@gmail.com");
-
     });
 });
