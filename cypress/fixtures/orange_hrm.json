@@ -12,6 +12,6 @@
     {
         "username":"Admin",
         "password":"admin123",
-        "expected":"PIM"
+        "expected":"Dashboard"
     }
-    ]
+]
