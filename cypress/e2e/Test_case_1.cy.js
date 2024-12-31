@@ -1,9 +1,11 @@
 import ObjectManager from "../pageobject/PageObject";
+import * as url from "../support/urls"
 describe('1--Practice the automation', () => {
 
     before('Navigate to url',() => {
         cy.clearLocalStorage();
-        cy.visit("https://automationexercise.com/");
+        // cy.visit("https://automationexercise.com/");
+        cy.visit(url.PageUrl1);
     });
     it('Verify that home page is visible successfully', () => {
         ObjectManager.homeObj.home_page_logo().should('exist');
