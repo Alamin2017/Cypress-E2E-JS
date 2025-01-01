@@ -7,6 +7,7 @@ class PageObject{
     //     this.productObj=new ProductLocator();
     //     this.loginObj=new LoginLocator();
     // }
+    // use anyone method
     homeObj=new HomeLocator();
     productObj=new ProductLocator();
     loginObj=new LoginLocator();
