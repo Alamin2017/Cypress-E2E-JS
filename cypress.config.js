@@ -8,6 +8,7 @@ module.exports = defineConfig({
     defaultCommandTimeout:60000,
     requestTimeout:60000,
     responseTimeout:60000,
+    pageLoadTimeout:60000,
     viewportWidth:1280,
     viewportHeight:720,
     video:false,
@@ -19,7 +20,7 @@ module.exports = defineConfig({
       screenshotOnRunFailure=true;
       
     },
-
+    
     testIsolation: false
   },
 });
