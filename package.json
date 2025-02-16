@@ -18,7 +18,7 @@
   "devDependencies": {
     "@faker-js/faker": "^8.4.0",
     "allure-commandline": "^2.30.0",
-    "cypress": "^13.16.1",
+    "cypress": "^14.0.3",
     "cypress-localstorage-commands": "^2.2.6",
     "cypress-xpath": "^2.0.1",
     "mocha-allure-reporter": "^1.4.0"
