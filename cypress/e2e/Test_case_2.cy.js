@@ -1,7 +1,9 @@
 import PageObject from "../pageobject/PageObject";
 describe('2--Practice the Automation', () => {
     beforeEach(() => {
+        cy.clearCookies();
         cy.clearLocalStorage();
+        cy.window().then((win)=> win.sessionStorage.clear());
         cy.visit("https://automationexercise.com/");
     });
     it('Test Case 1: Register User', () => {

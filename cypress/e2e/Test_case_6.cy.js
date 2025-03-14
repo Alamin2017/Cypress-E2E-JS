@@ -1,5 +1,7 @@
 it('should login successfully with valid credentials', () => {
+    cy.clearCookies();
     cy.clearLocalStorage();
+    cy.window().then((win)=> win.sessionStorage.clear());
     cy.visit('https://automationexercise.com/');
 
     cy.xpath("//a[normalize-space()='Home']").should('have.text', ' Home');
