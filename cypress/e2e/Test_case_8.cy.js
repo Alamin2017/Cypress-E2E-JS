@@ -1,4 +1,5 @@
-import Actions from "../support/actions";
+
+import Actions from "../pageobject/Action";
 import { DashboardPage } from "../pages/DashboardPage";
 describe('File upload test automation', () => {
 
@@ -12,5 +13,5 @@ describe('File upload test automation', () => {
       Actions.textValidation(DashboardPage.new_user_signup_text,"New User Signup!");
       
     });
-    
+
   });
