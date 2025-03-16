@@ -20,7 +20,8 @@ class Actions {
     async clickElement(locator) {
         try {
             await cy.xpath(locator).click();
-        } catch (error) {
+        } 
+        catch (error) {
             cy.log(`Error clicking element: ${locator}, Error: ${error.message}`);
             throw error;
         }
@@ -30,7 +31,8 @@ class Actions {
             await cy.xpath(locator).invoke('text').then((actualText) => {
                 expect(actualText.trim()).to.equal(expectedText);
             });
-        } catch (error) {
+        } 
+        catch (error) {
             cy.log(`Text validation failed for: ${locator}, Error: ${error.message}`);
             throw error;
         }
@@ -38,7 +40,8 @@ class Actions {
     async doEnterValue(locator, value) {
         try {
             await cy.xpath(locator).clear().type(value);
-        } catch (error) {
+        } 
+        catch (error) {
             cy.log(`Error entering value in: ${locator}, Error: ${error.message}`);
             throw error;
         }
@@ -46,7 +49,8 @@ class Actions {
     async elementVisible(locator) {
         try {
             await cy.xpath(locator).should('be.visible');
-        } catch (error) {
+        } 
+        catch (error) {
             cy.log(`Element not visible: ${locator}, Error: ${error.message}`);
             throw error;
         }
