@@ -22,4 +22,5 @@ describe('Cypress Session Example', () => {
   it('Test Case 2: Scroll to Bottom', () => {
     cy.xpath("//a[normalize-space()='Logout']").click();
   });
+  
 });
