@@ -37,7 +37,7 @@ describe('Cypress Session Example', () => {
     }
   );
     // Ensure we are on the homepage after session restoration
-    cy.visit('https://automationexercise.com/');
+    // cy.visit('https://automationexercise.com/');
 });
 
   it('Test Case 1: Verify Features Items', () => {
