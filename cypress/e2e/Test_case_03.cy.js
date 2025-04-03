@@ -1,5 +1,5 @@
 import PageObject from "../pageobject/PageObject";
-describe('Color code test automation', () => {
+describe('Code test automation', () => {
     it('test started', () => {
         cy.clearCookies();
         cy.clearLocalStorage();
